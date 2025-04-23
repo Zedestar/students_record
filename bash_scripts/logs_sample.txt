@@ -1,0 +1,44 @@
+
+server_health.log 
+
+1-entry return:
+ubuntu@ip-172-31-23-104:~$ cat /var/log/server_health.log
+2025-04-19 21:23:24 Health Check
+nginx is running
+WARNING: /students endpoint returned 404
+WARNING: /subjects endpoint returned 404
+CPU Usage: 0%
+Memory Usage: 51.79%
+Disk Space Used: 40%
+
+
+
+backup.log 
+
+1-entry 
+ubuntu@ip-172-31-23-104:~$ cat /var/log/backup.log
+tar: Removing leading `/' from member names
+tar: /var/www/student-api: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+cp: cannot stat '/var/www/student-api/db.sqlite3': No such file or directory
+2025-04-19 21:23:59 Backup completed successfully.
+2025-04-19 21:42:41 ERROR: API backup failed
+2025-04-19 22:13:40 API backup successful
+2025-04-19 22:13:40 Database backup successful
+2025-04-19 22:13:40 Backup completed successfully.
+
+
+
+
+update.log
+
+1-entry
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Already up to date.
+2025-04-21 10:35:26 Update completed and server restarted
+
+
