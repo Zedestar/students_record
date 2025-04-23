@@ -8,8 +8,8 @@ nginx is running
 WARNING: /students endpoint returned 404
 WARNING: /subjects endpoint returned 404
 CPU Usage: 0%
-Memory Usage: 49.50%
-Disk Space Used: 45%
+Memory Usage: 51.79%
+Disk Space Used: 40%
 
 
 
