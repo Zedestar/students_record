@@ -2,7 +2,6 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Student, Course
-from .serializers import StudentListSerializer, CourseListSerializer
 
 # Create your views here.
 
