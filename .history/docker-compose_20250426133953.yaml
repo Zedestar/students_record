@@ -3,27 +3,18 @@ version: "3.8"
 services:
   app:
     build: .
-    container_name: django_container
-    image: app:django
     volumes:
       - .:/django
     ports:
       - 8000:8000
+    image: app:django
+    container_name: django_container
     command: gunicorn student_record.wsgi:application --bind 0.0.0.0:8000
-    networks:
-      - backend
 
   nginx:
     build: ./nginx
-    container_name: nginx_container
-    image: rp:nginx
     ports:
       - 80:80
-    depends_on:
+    image: rp:nginx
+    links:
       - app
-    networks:
-      - backend
-
-networks:
-  backend:
-    driver: bridge

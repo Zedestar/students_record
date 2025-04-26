@@ -123,11 +123,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 # ALLOWED_HOSTS = ['51.20.78.33', '*']
-ALLOWED_HOSTS = ['www.edenthought.com', 'edenthought.com', 'localhost', '127.0.0.1', '*']
-
-# - This will allow the dynamic ip's from range ECS - VALIDATE "*"
-
-ALLOWED_CIDR_NETS = ['172.17.0.0/16']
+ALLOWED_HOSTS = ['www.edenthought.com', 'edenthought.com', 'localhost', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = ['https://www.edenthought.com']
 

@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.8-buster
 
 
 ENV PYTHONUNBUFFERED=1
@@ -11,7 +11,11 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
+CMD gunicorn student_record.wsgi:application --bind 0.0.0.0:8000
 
 EXPOSE 8000
 
-CMD ["gunicorn", "student_record.wsgi:application", "--bind", "0.0.0.0:8000"]
+
+
+
+
