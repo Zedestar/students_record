@@ -1,0 +1,79 @@
+# Project Name Student_Record
+
+## Description
+
+This project is a Django web application for managing student records. It includes a REST API, database management, and is containerized with Docker. It also has scripts for backups and server updates.
+
+## Table of Contents
+
+- [Description]
+- [Installation]
+- [Usage]
+- [Directory Structure]
+- [Configuration]
+- [Contributing]
+
+## Installation
+
+**Using Docker (Recommended):**
+
+`Clone the repository`
+git clone : https://github.com/Zedestar/students_record.git
+cd student_record
+
+`Build and run the Docker containers`
+docker-compose up -d
+
+**Manual Installation:**
+
+`Clone the repository`
+git clone : https://github.com/Zedestar/students_record.git
+cd student_record
+
+`Create a virtual environment`
+python3 -m venv venv
+source venv/bin/activate
+
+`Install dependencies`
+pip install -r requirements.txt
+
+`Set up the database`
+python manage.py migrate
+python manage.py createsuperuser
+
+`Running the Django development server`
+python manage.py runserver
+
+Access the application in your browser at ` http://16.170.253.209:80`.
+
+- API Usage: The API is available at `/api/`.
+
+  - `GET studentList/`: List all students.
+  - `GET /api/studentCourse/`: List student course.
+
+- Running scripts:
+  - `bash bash_scripts/backup_api.sh`: Runs the API backup script.
+  - `bash bash_scripts/health_check.sh`: Runs the health check script.
+  - `bash bash_scripts/update_server.sh`: Runs the server update script.
+
+`Directory Structure`
+
+.
+├── bash_scripts/ # Contains shell scripts
+│ ├── backup_api.sh # API backup script
+│ ├── cronn-job.png # Cron job image
+│ ├── health_check.sh # Application health check script
+│ ├── logs_sample.txt # Sample log file
+│ └── update_server.sh # Server update script
+├── nginx/ # Nginx configuration
+│ ├── Dockerfile # Nginx Dockerfile
+│ └── nginx.conf # Nginx configuration file
+├── student_record/ # Django project directory
+│ ├── asgi.py # ASGI configuration
+│ ├── settings.py # Django settings
+│ ├── urls.py # Django URL routing
+│ ├── wsgi.py # WSGI configuration
+│ └── students/ # Student management Django app
+│ ├── migrations/ # Database migrations
+│ │ └── init.py
+│ ├──
