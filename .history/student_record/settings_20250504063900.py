@@ -130,7 +130,6 @@ ALLOWED_HOSTS = ['www.edenthought.com', 'edenthought.com', 'localhost', '127.0.0
 # - This will allow the dynamic ip's from range ECS - VALIDATE "*"
 
 ALLOWED_CIDR_NETS = ['172.17.0.0/16']
-CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = ['https://www.edenthought.com']
 
